@@ -5,7 +5,6 @@
   packages = [
     pkgs.jdk21
     pkgs.unzip
-    pkgs.flutter
     pkgs.nodePackages.firebase-tools
   ];
 

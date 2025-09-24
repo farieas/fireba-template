@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-   channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
-  # channel = "unstable";
+  # channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
+  channel = "unstable";
 
   packages = [
     pkgs.jdk21

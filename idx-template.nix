@@ -7,9 +7,9 @@
     pkgs.gnutar
     pkgs.xz
     pkgs.flutter
-    packages.jdk21
+    pkgs.jdk21
   ];
-
+  
   bootstrap = ''
     echo "Waiting for Firebase Studio environment..."
     sleep 2

@@ -12,9 +12,7 @@
   ];
   
   bootstrap = ''
-    echo "Waiting for Firebase Studio environment..."
-    sleep 2
-
+    
     echo "Creating Flutter project using Firebase Studio Flutter version..."
     flutter create "$out" --platforms="${platforms}" --template="${template}"
 

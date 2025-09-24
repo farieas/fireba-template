@@ -1,21 +1,23 @@
-# No user-configurable parameters
-{ pkgs, ... }: {
-  # Shell script that produces the final environment
-  bootstrap = ''
-    # Copy the folder containing the `idx-template` files to the final
-    # project folder for the new workspace. ${./.} inserts the directory
-    # of the checked-out Git folder containing this template.
-    cp -rf ${./.} "$out"
+{ pkgs, sample ? "none", template ? "app", platforms ? "android,ios,web", statemanagement ? "bloc", ... }:
+{
+  packages = [
+    pkgs.git
+    pkgs.curl
+    pkgs.gnutar
+    pkgs.xz
+  ];
 
-    # Set some permissions
+  bootstrap = ''
+    echo "Waiting for Firebase Studio environment..."
+    sleep 2
+
+    echo "Creating Flutter project using Firebase Studio Flutter version..."
+    flutter create "$out" --platforms="${platforms}" --template="${template}"
+
+    mkdir -p "$out"/.idx
+    cp ${./dev.nix} "$out"/.idx/dev.nix
+    install --mode u+rw ${./dev.nix} "$out"/.idx/dev.nix
     chmod -R u+w "$out"
 
-    # Create .dev directory and copy dev.nix to it
-    mkdir -p "$out/.idx"
-    cp ${./dev.nix} "$out"/.idx/dev.nix
-
-    # Remove the template files themselves and any connection to the template's
-    # Git repository
-    rm -rf "$out/.git" "./dev.nix" "$out/idx-template".{nix,json}
   '';
 }

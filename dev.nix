@@ -6,6 +6,7 @@
     pkgs.jdk21
     pkgs.unzip
     pkgs.flutter
+    pkgs.nodePackages.firebase-tools
   ];
 
   env = {
@@ -18,7 +19,9 @@
       "Dart-Code.dart-code"
     ];
     workspace = {
-      onCreate = { };
+      onCreate = { 
+        installDependencies = "flutter pub get";
+      };
     };
     previews = {
       enable = true;

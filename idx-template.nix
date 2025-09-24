@@ -8,6 +8,7 @@
     pkgs.xz
     pkgs.flutter
     pkgs.jdk21
+    pkgs.busybox
   ];
   
   bootstrap = ''

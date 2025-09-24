@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-  # channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
-  channel = "unstable";
+   channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
+  # channel = "unstable";
 
   packages = [
     pkgs.jdk21
@@ -8,7 +8,9 @@
     pkgs.flutter
   ];
 
-  env = {};
+  env = {
+    PATH = ["/home/user/.pub-cache/bin"  "/home/user/flutter/bin" "./.flutter-sdk/flutter/bin"];
+  };
 
   idx = {
     extensions = [
@@ -29,6 +31,7 @@
           command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555"];
           manager = "flutter";
         };
+        
       };
     };
   };

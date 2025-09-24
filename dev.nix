@@ -1,9 +1,16 @@
 { pkgs, ... }: {
-  channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
+  # channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
+  channel = "unstable";
 
   packages = [
     pkgs.jdk21
     pkgs.unzip
+    pkgs.flutter
+
+    pkgs.androidsdk
+    pkgs.androidsdkplatformtools
+    pkgs.androidsdktools
+    pkgs.androidemulator
   ];
 
   env = {};

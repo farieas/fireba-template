@@ -1,5 +1,6 @@
 { pkgs, sample ? "none", template ? "app", platforms ? "android,ios,web", statemanagement ? "bloc", ... }:
 {
+  channel = "unstable";
   packages = [
     pkgs.git
     pkgs.curl

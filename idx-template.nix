@@ -7,6 +7,7 @@
     pkgs.gnutar
     pkgs.xz
     pkgs.flutter
+    packages.jdk21
   ];
 
   bootstrap = ''

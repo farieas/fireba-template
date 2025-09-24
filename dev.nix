@@ -6,11 +6,6 @@
     pkgs.jdk21
     pkgs.unzip
     pkgs.flutter
-
-    pkgs.androidsdk
-    pkgs.androidsdkplatformtools
-    pkgs.androidsdktools
-    pkgs.androidemulator
   ];
 
   env = {};

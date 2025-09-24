@@ -5,6 +5,7 @@
     pkgs.curl
     pkgs.gnutar
     pkgs.xz
+    pkgs.flutter
   ];
 
   bootstrap = ''

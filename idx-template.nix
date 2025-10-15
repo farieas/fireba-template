@@ -4,6 +4,7 @@
     pkgs.git
     pkgs.dart
     pkgs.glibc
+    pkgs.file
   ];
   bootstrap = ''
     set -e  # Exit on error

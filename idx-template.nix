@@ -13,6 +13,9 @@
     # Create workspace directory
     # mkdir -p "$WS_NAME"
     # mkdir -p "$out"
+
+    export LD_LIBRARY_PATH=${pkgs.glibc}/lib:$LD_LIBRARY_PATH
+    export PATH=$PATH:/home/user/flutter/bin
     
     # Copy Flutter project using rsync (preserves permissions and handles hidden files)
     if [ -d "$HOME/myapp" ]; then

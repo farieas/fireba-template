@@ -2,7 +2,6 @@
   packages = [
     pkgs.rsync  # For better file copying
     pkgs.git
-    pkgs.dart
     pkgs.glibc
     pkgs.file
   ];

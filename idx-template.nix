@@ -8,7 +8,7 @@
     echo "🔧 Initializing Flutter Firebase Template..."
     
     # Create workspace directory
-    # mkdir -p "$WS_NAME"
+     mkdir -p "$WS_NAME"
     # mkdir -p "$out"
     
     # Copy Flutter project using rsync (preserves permissions and handles hidden files)

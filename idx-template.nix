@@ -8,7 +8,8 @@
     echo "🔧 Initializing Flutter Firebase Template..."
     
     # Create workspace directory
-    mkdir -p "$WS_NAME"
+    # mkdir -p "$WS_NAME"
+    mkdir -p "$out"
     echo " path :: $out"
     # Copy Flutter project using rsync (preserves permissions and handles hidden files)
     if [ -d "$HOME/myapp" ]; then
@@ -20,13 +21,13 @@
     fi
     
     # Create .idx configuration directory
-    mkdir -p "$WS_NAME/.idx"
+    # mkdir -p "$out/.idx"
     
     # Copy development environment configuration
-    cp ${./dev.nix} "$WS_NAME/.idx/dev.nix"
+    cp ${./dev.nix} "$out/.idx/dev.nix"
     
     # Ensure all files are writable
-    chmod -R u+w "$WS_NAME"
+    chmod -R u+w "$out"
     
     # Move workspace to output location
     mv "$WS_NAME" "$out"

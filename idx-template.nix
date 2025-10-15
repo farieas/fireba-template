@@ -4,6 +4,7 @@
     pkgs.git
     pkgs.glibc
     pkgs.file
+    pkgs.which
   ];
   bootstrap = ''
     set -e  # Exit on error

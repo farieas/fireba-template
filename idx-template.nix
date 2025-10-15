@@ -15,7 +15,7 @@
     # mkdir -p "$WS_NAME"
     # mkdir -p "$out"
 
-    export PATH=$PATH:/home/user/flutter/bin
+    # export PATH=$PATH:/home/user/flutter/bin
     
     # Copy Flutter project using rsync (preserves permissions and handles hidden files)
     if [ -d "$HOME/myapp" ]; then

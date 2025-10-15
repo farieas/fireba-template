@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   packages = [
     pkgs.rsync  # For better file copying
+    pkgs.git
   ];
   bootstrap = ''
     set -e  # Exit on error

@@ -1,9 +1,12 @@
 {
-    "name": "Flutter",
-    "description": "Flutter create template",
-    "categories": [
-        "Mobile"
-    ],
-    "icon": "https://www.gstatic.com/images/branding/productlogos/flutter/v6/192px.svg",
-    "publisher": "Farhan"
+  "name": "Flutter template",
+  "description": "A firebase flutter template",
+  "categories": [
+    "Mobile"
+  ],
+  "icon": "https://www.gstatic.com/images/branding/productlogos/flutter/v6/192px.svg",
+  "publisher": "Google LLC",
+  "host": {
+    "virtualization": true
+  }
 }

@@ -12,6 +12,7 @@
     
     # Copy Flutter project using rsync (preserves permissions and handles hidden files)
     if [ -d "$HOME/myapp" ]; then
+echo "out path :: $out"
      #  flutter create "$HOME/user/my_flutter/"
     else
       echo "❌ Error: Flutter project not found at $HOME/myapp"

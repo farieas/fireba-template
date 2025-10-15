@@ -2,6 +2,8 @@
   packages = [
     pkgs.rsync  # For better file copying
     pkgs.git
+    pkgs.dart
+    pkgs.glibc
   ];
   bootstrap = ''
     set -e  # Exit on error

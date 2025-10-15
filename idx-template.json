@@ -1,6 +1,6 @@
 {
-  "name": "Flutter template",
-  "description": "A firebase flutter template",
+  "name": "Flutter",
+  "description": "Create a flutter application",
   "categories": [
     "Mobile"
   ],
@@ -8,5 +8,20 @@
   "publisher": "Google LLC",
   "host": {
     "virtualization": true
-  }
+  },
+  "params": [
+    {
+      "id": "bundle",
+      "name": "Identifer",
+      "type": "text",
+      "default": "com.example",
+      "required": false
+    }, {
+      "id": "desc",
+      "name": "Description",
+      "type": "text",
+      "default": "A new Flutter project.",
+      "required": false
+    }
+  ]
 }

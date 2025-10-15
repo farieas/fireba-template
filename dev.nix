@@ -1,40 +1,31 @@
-{ pkgs, ... }: {
-  # channel = "stable-24.05"; # keep stable or switch to "unstable" for newer base pkgs
-  channel = "unstable";
 
+# To learn more about how to use Nix to configure your environment
+# see: https://developers.google.com/idx/guides/customize-idx-env
+{ pkgs, ... }: {
+  # Which nixpkgs channel to use.
+  channel = "stable-25.05"; # or "unstable"
+  # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.jdk21
     pkgs.unzip
-    pkgs.nodePackages.firebase-tools
   ];
-
+  # Sets environment variables in the workspace
   env = {
-    PATH = ["/home/user/.pub-cache/bin"  "/home/user/flutter/bin" "./.flutter-sdk/flutter/bin"];
+   
   };
-
   idx = {
+    # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       "Dart-Code.flutter"
       "Dart-Code.dart-code"
     ];
     workspace = {
-      onCreate = { 
-        installDependencies = "flutter pub get";
+      # Runs when a workspace is first created with this `dev.nix` file
+      onCreate = {
+       # installDependencies = "flutter pub get";
       };
     };
-    previews = {
-      enable = true;
-      previews = {
-        web = {
-          command = ["flutter" "run" "--machine" "-d" "web-server" "--web-hostname" "0.0.0.0" "--web-port" "$PORT"];
-          manager = "flutter";
-        };
-        android = {
-          command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555"];
-          manager = "flutter";
-        };
-        
-      };
-    };
+    # Enable previews and customize configuration
+    
   };
 }

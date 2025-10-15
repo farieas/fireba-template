@@ -9,7 +9,7 @@
     
     # Create workspace directory
     # mkdir -p "$WS_NAME"
-    mkdir -p "$out"
+    # mkdir -p "$out"
     echo " path :: $out"
     # Copy Flutter project using rsync (preserves permissions and handles hidden files)
     if [ -d "$HOME/myapp" ]; then
